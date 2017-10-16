@@ -122,7 +122,7 @@ class RegisterController extends Controller
         return view("home");
     }
 
-    return view()->with("msjerror","credenciales incorrectas");
+    return "Credenciales Incorrectas";
 
     }
 
@@ -140,7 +140,7 @@ class RegisterController extends Controller
 
         
 
-        protected function postRegister(Request $request)
+   protected function postRegister(Request $request)
 
    {
     $this->validate($request, [
@@ -161,7 +161,7 @@ class RegisterController extends Controller
 
     if($user->save()){
 
-         return "se ha registrado correctamente el usuario";
+         return "Se ha registrado correctamente el usuario";
                
     }
    
